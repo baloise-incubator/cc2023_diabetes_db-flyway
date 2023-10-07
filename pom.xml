@@ -14,8 +14,6 @@
       <maven.compiler.release>${java.version}</maven.compiler.release>
       <testcontainers.version>1.17.6</testcontainers.version>
       <postgres.version>42.6.0</postgres.version>
-      <db.username>postgres</db.username>
-      <db.password>sakila</db.password>
       <org.jooq.groupId>org.jooq</org.jooq.groupId>
       <org.jooq.version>3.18.5</org.jooq.version>
       <db.url>jdbc:postgresql://localhost:5432/postgres</db.url>
