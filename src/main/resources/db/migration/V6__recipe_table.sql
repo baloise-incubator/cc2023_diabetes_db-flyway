@@ -1,0 +1,26 @@
+create table RECIPE (
+    ID SERIAL not null,
+    USER_ID uuid not null,
+    TITLE varchar(254)
+);
+
+ALTER TABLE RECIPE ADD PRIMARY KEY (id);
+
+create table RECIPE_INCREEDIENTS (
+    ID SERIAL not null,
+    RECIPE SERIAL not null,
+    FOOD SERIAL not null,
+    AMOUNT numeric
+);
+
+ALTER TABLE RECIPE_INCREEDIENTS ADD PRIMARY KEY (id);
+
+ALTER table RECIPE_INCREEDIENTS
+ADD CONSTRAINT fk_ingreedients_recipe
+FOREIGN KEY (RECIPE)
+REFERENCES RECIPE (ID);
+
+ALTER table RECIPE_INCREEDIENTS
+ADD CONSTRAINT fk_ingreedients_food
+FOREIGN KEY (FOOD)
+REFERENCES FOOD (ID);
